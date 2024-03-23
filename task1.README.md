@@ -56,7 +56,23 @@ The OLAP server collects data from multiple data sources, including relational d
 
 
 ## 3.Database Normal forms(4 normal forms)
+**Normalization** :  It is the process of determining how much redundancy exists in a table. The goals of normalization are to:
+* Be able to characterize the level of redundancy in a relational schema
+* Provide mechanisms for transforming schemas in order to remove redundancy
+##### Normal Forms:
+Total there are 6 normal forms. There are 4 most important normal forms. They are
+* First normal form (1NF)
+* Second normal form (2NF)
+* Third normal form (3NF)
+* Boyce-Codd normal form (BCNF)
 
+**First Normal Form (1NF)**: In the first normal form, only single values are permitted at the intersection of each row and column; hence, there are no repeating groups.To normalize a relation that contains a repeating group, remove the repeating group and form two new relations.The PK of the new relation is a combination of the PK of the original relation plus an attribute from the newly created relation for unique identification
+
+**Second Normal Form (2NF)**:For the second normal form, the relation must first be in 1NF. The relation is automatically in 2NF if, and only if, the PK comprises a single attribute.If the relation has a composite PK, then each non-key attribute must be fully dependent on the entire PK and not on a subset of the PK (i.e., there must be no partial dependency or augmentation).
+
+**Third Normal Form (3NF)**:To be in third normal form, the relation must be in second normal form. Also all transitive dependencies must be removed; a non-key attribute may not be functionally dependent on another non-key attribute.
+
+**Boyce-Codd Normal Form (BCNF)**: When a table has more than one candidate key, anomalies may result even though the relation is in 3NF. Boyce-Codd normal form is a special case of 3NF. A relation is in BCNF if, and only if, every determinant is a candidate key.
 
 ## 4.Dimension VS Fact table
 
