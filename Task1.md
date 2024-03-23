@@ -42,8 +42,41 @@ Record keeping (including health records, inventory control, production scheduli
 
 
 OLAP:
+OLAP (online analytical processing) is a computing method that enables users to easily and selectively extract and query data in order to analyze it from different points of view.
+
+OLAP Architecture:
+online analytical processing (OLAP) systems store multidimensional data by representing information in more than two dimensions, or categories. Two-dimensional data involves columns and rows, but multidimensional data has multiple characteristics
+
+Usually OLAP systems consists of Data warehouse, ETL tools, OLAP server, OLAP database, OLAP cubes, OLAP analytic tools
+
+OLAP Working:
+
+An online analytical processing (OLAP) system works by collecting, organizing, aggregating, and analyzing data using the following steps: 
+
+The OLAP server collects data from multiple data sources, including relational databases and data warehouses.
+Then, the extract, transform, and load (ETL) tools clean, aggregate, precalculate, and store data in an OLAP cube according to the number of dimensions specified.
+Business analysts use OLAP tools to query and generate reports from the multidimensional data in the OLAP cube.
+OLAP uses Multidimensional Expressions (MDX) to query the OLAP cube. MDX is a query, like SQL, that provides a set of instructions for manipulating databases.
+
+Examples:
+OLAP can be used for data mining or the discovery of previously undiscerned relationships between data items,
+
 
 2.Differences between OLTP & OLAP
+
+The primary purpose: OLAP is to analyze aggregated data, while the OLTP is to process database transactions.
+
+uses: OLAP systems are used to generate reports, perform complex data analysis, and identify trends.  OLTP systems are used to process orders, update inventory, and manage customer accounts.
+
+Data formatting:OLAP systems use multidimensional data models, so you can view the same data from different angles.  OLTP systems are unidimensional and focus on one data aspect. They use a relational database to organize data into tables. 
+
+Data architecture: OLAP prioritizes data read over data write operations. it can quickly and efficiently perform complex queries on large volumes of data. Availability is a low-priority concern as the primary use case is analytics. OLTP prioritizes data write operations. It’s optimized for write-heavy workloads and can update high-frequency, high-volume transactional data without compromising data integrity.
+
+Performance: OLAP processing times can vary from minutes to hours depending on the type and volume of data being analyzed. To update an OLAP database, you periodically process data in large batches then upload the batch to the system all at once. Data update frequency also varies between systems, from daily to weekly or even monthly. OLTP processing time is in milliseconds or less. OLTP databases manage database updates in real time. Updates are fast, short, and triggered by you or your users. 
+
+Example applications:OLAP is good for analyzing trends, predicting customer behavior, and identifying profitability. OLTP is good for processing payments, customer data management, and order processing.
+
+
 
 
 
