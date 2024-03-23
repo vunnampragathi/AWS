@@ -1,4 +1,65 @@
-# 1. What is OLTP and OLAP
+1. What is OLTP and OLAP
+
+OLTP:
+Online Transaction Processing (OLTP) enables the real-time execution of large numbers of database transactions by large numbers of people, typically over the internet.
+A database transaction is a change, insertion, deletion, or query of data in a database. 
+it is a type of database system that is used for high-speed data processing and rapid transaction execution in real-time.
+Businesses use OLTP systems to manage a large volume of database transactions from many users without harming database consistency and accuracy.A database transaction is any change made in a database, like inserting or deleting.
+OLTP databases are relational databases. They organize data in tables consisting of rows and columns.
+	
+OLTP Architecture:
+It has 3 layers
+The presentation layer:  
+This layer is the front end or user interface where transactions are generated.
+The logic layer: 
+Also called the business logic or application layer, this layer processes transaction data based on predefined rules.
+The data or data store layer:
+This is where each transaction and related data are stored and indexed. It includes the database management system (DBMS) and the database server.
+
+Each layer has its own infrastructure and updating intervals. They operate independently so that changes to one layer do not impact the others.
+
+Characterstics of OLTP:
+1. fast query processing: OLTP systems are used for high-speed query processing. They handle transactions in real-time, meaning that transactions are executed as soon as they are received, with little or no delay.
+
+2. High concurrency :OLTP systems use algorithms that allow many concurrent users to perform transactions simultaneously. Each transaction is executed independently of the others and in the proper order.
+Two users cannot change the same data within an OLTP database at the same time, which is crucial for maintaining data integrity.
+
+3. supports ACID properties
+
+Atomicity: Transactions in OLTP systems are atomic, meaning they are treated as a single, indivisible unit of work. If any part of a transaction fails, the entire transaction is rolled back, so the database is left in its original state.
+
+Consistency: OLTP databases are designed to maintain data consistency, despite failures or errors. Every transaction changes tables in predefined and predictable ways, and the database will always be in a valid state.
+
+Isolation: Transactions in OLTP systems are isolated from each other. This means that when multiple users read and write data simultaneously, they are executed independently. Isolation ensures that the changes made by one transaction do not interfere with the changes made by others. It keeps the database in a consistent state.‍
+
+Durability: When a transaction is successfully executed in an OLTP database, the changes to the data are permanent and will survive any subsequent failures or errors, like system crashes or power outages.
+
+4. Support for simple transactions: OLTP systems support specific applications or business processes like order processing, inventory management, or customer service. They are typically not used for complex queries, data analysis, or reporting tasks.
+
+Examples:
+ATM machines and online banking applications, Credit card payment processing, Order entry,Online bookings,
+Record keeping (including health records, inventory control, production scheduling, claims processing, customer service ticketing, and many other applications)
+
+
+OLAP:
+
+2.Differences between OLTP & OLAP
+
+
+
+3.Database Normal forms(4 normal forms)
+
+
+
+4. Dimension VS Fact table
+
+
+
+5.Types of Dimensions
+
+
+
+6. Snowflake VS Star Schema
 
 
 
